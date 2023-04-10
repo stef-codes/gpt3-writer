@@ -6,7 +6,10 @@ const configuration = new Configuration({
 
 const openai = new OpenAIApi(configuration);
 
-const basePromptPrefix = "";
+const basePromptPrefix = 
+`
+Create a vegan recipe for this dish detailed step-by-step recipe by a professional chef:
+`
 const generateAction = async (req, res) => {
   // Run first prompt
   console.log(`API: ${basePromptPrefix}${req.body.userInput}`)
@@ -14,9 +17,10 @@ const generateAction = async (req, res) => {
   const baseCompletion = await openai.createCompletion({
     model: 'text-davinci-003',
     prompt: `${basePromptPrefix}${req.body.userInput}`,
-    temperature: 0.7,
-    max_tokens: 250,
+    temperature: 0.8,
+    max_tokens: 500,
   });
+
   
   const basePromptOutput = baseCompletion.data.choices.pop();
 
