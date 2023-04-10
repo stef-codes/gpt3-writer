@@ -50,15 +50,19 @@ const Home = () => {
           <div className="prompt-container">
             <textarea 
               className="prompt-box"
-              placeholder="start typing here" 
+              placeholder="Burger" 
               value={userInput}
               onChange={onUserChangedText}
              />
             <div className="prompt-buttons">
-              <a className="generate-button" onClick={callGenerateEndpoint}>
-            <div className="generate">
-             <p>Generate</p>
-            </div>
+              <a
+                className={isGenerating ? 'generate-button loading' : 'generate-button'}
+                onClick={callGenerateEndpoint}
+              >
+              
+              <div className="generate">
+                {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
+              </div>
               </a>
             </div>
               {/* New code I added here */}
