@@ -93,7 +93,7 @@ body {
     flex: 0 0 auto;
     flex-flow: column nowrap;
     gap: 10px;
-    height: 150px;
+    height: 20px;
     overflow: hidden;
     padding: 20px;
     position: relative;
@@ -333,12 +333,13 @@ textarea {
     }
 
     .prompt-container {
-        max-width: 600px;
-        width: 100%;
+        max-width: 400px;
+        width: 50%;
     }
 
     .prompt-box {
-        width: 100%;
+        max-width: 50%;
+        max-height: fit-content;
     }
 }
 
