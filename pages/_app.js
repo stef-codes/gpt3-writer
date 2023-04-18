@@ -1,4 +1,5 @@
 import './styles.css';
+import { useRouter } from 'next/router';
 import * as ga from '../lib/analytics';
 
 function App({ Component, pageProps }) {
