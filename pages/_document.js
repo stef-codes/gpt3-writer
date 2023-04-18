@@ -18,6 +18,7 @@ export default function Document() {
           function gtag(){dataLayer.push(arguments)}
           gtag('js', new Date());
           gtag('config', 'G-1RM9PF9TSQ');
+          
         </script>
       </Head>
       <body>
