@@ -1,5 +1,6 @@
 import './styles.css';
 import { useRouter } from 'next/router';
+import React, { useState, useEffect } from 'react';
 import * as ga from '../lib/analytics';
 
 function App({ Component, pageProps }) {
